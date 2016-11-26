@@ -1,3 +1,4 @@
+//书籍信息集合模块
 define(['backbone'],function(B){
     //定义模型
     var Book = B.Model.extend({
@@ -8,11 +9,11 @@ define(['backbone'],function(B){
         model:Book, //指定集合的模型
         url:'/api/v1/books/',//指定取数据的地址
         parse:function(res){
-            return res.data
+            return res.data;
         }
     })
     return{
         model:Book,
         collection:Books
-    }
+    };
 })

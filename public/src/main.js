@@ -20,7 +20,8 @@ require.config({
         'homeTpl':'./tpl/home.html', //首页的模板文件
         'homeView':'./views/home_view', //首页的视图文件
 
-        'bookModel':'./models/book_model'
+        'bookModel':'./models/book_model',
+        'studentModel': './models/student_model'
     }
 })
 require(['backbone','jquery','loginView','homeView','regView','userinfoView'],function(B,$,loginView,homeView,regView,userinfoView){
@@ -31,9 +32,10 @@ require(['backbone','jquery','loginView','homeView','regView','userinfoView'],fu
             "login":"loginPage",
             "userinfo":"userinfoPage"
         },
-        indexPage:function(e){
+        indexPage:function(){
             this.setCurrentStyle('#')
             var view = new homeView()
+            //模板渲染
             $('#main').html(view.render().$el)
             console.log('这里访问的是indexPage')
         },
@@ -46,6 +48,7 @@ require(['backbone','jquery','loginView','homeView','regView','userinfoView'],fu
         loginPage:function(){
             this.setCurrentStyle('#login')
             var view = new loginView()
+            //把render改为跳转
             $('#main').html(view.render().$el)
             console.log('这里访问的是loginPage')
         },
