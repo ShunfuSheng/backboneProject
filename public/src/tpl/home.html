@@ -10,6 +10,8 @@
             <h4 class="weui-media-box__title">{{$value.title}}</h4>
             <p class="weui-media-box__desc">{{$value.author}}</p>
         </div>
+        <a href="javascript:;" data-id="{{$value._id}}" class="weui-btn weui-btn_mini weui-btn_primary borrow" style="margin-left: 100px">借阅</a>
     </a>
     {{/each}}
 </div>
+<a class="weui-btn weui-btn_primary" href="javascript:" id="loadMore">加载更多</a>

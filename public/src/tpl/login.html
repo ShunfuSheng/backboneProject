@@ -1,24 +1,20 @@
 <h1 style="text-align: center">{{title}}</h1>
-<div class="weui-cells weui-cells_form">
-    <div class="weui-cell">
-        <div class="weui-cell__hd"><label class="weui-label">用户名</label></div>
-        <div class="weui-cell__bd">
-            <input class="weui-input" type="text" name="user_name" required placeholder="请输入用户名" />
+<form action="#" method="post" id="login_form">
+    <div class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label for="user_name" class="weui-label">用户名</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" name="user_name" id="user_name" required placeholder="请输入用户名" />
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label for="user_pwd" class="weui-label">密码</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="password" name="pwd" id="user_pwd" required placeholder="请输入密码" />
+            </div>
+        </div>
+        <div class="weui-btn-area">
+            <a class="weui-btn weui-btn_primary" href="javascript:" id="showTooltips">确定</a>
         </div>
     </div>
-    <div class="weui-cell">
-        <div class="weui-cell__hd"><label class="weui-label">密码</label></div>
-        <div class="weui-cell__bd">
-            <input class="weui-input" type="password" name="user_pwd" required placeholder="请输入密码" />
-        </div>
-    </div>
-    <div class="weui-btn-area">
-        <a class="weui-btn weui-btn_primary" href="javascript:" id="showTooltips">确定</a>
-    </div>
-</div>
-
-<script>
-    document.getElementById('showTooltips').onclick = function () {
-        console.log(123456);
-    }
-</script>
+</form>
