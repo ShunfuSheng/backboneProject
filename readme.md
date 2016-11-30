@@ -11,10 +11,11 @@
     public/src/main.js     //客户端js主入口文件
 ```
 
-#### 主要使用的知识点
+#### 主要实现途径
 1. express框架实现服务器端数据接口
 2. mongoose实现数据库内容读取
 3. 客户端js文件使用requirejs进行模块化组织
 4. 页面渲染使用template模版
 5. ui展示效果使用weui实现
 6. ajax请求使用jquery实现
+7. backbone前端框架的应用
