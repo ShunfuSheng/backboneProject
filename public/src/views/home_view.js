@@ -20,11 +20,12 @@ define(['backbone','text!homeTpl','template','api','bookModel','jquery','pace'],
             return this;
         },
         loadDataEnd:function(){
-            //返回数据完之后当前页加1
+            //返回数据完之后当前页码加1
             this.currentPage += 1;
             //渲染页面
             this.render();
         },
+        //模板视图事件的注册绑定
         events: {
             'click .borrow': 'borrow',
             'click #loadMore': 'loadMore'

@@ -100,6 +100,7 @@ app.post('/api/v1/reg_userInfo',(req,res)=>{
 app.get('/api/v1/get_userinfo', (req,res)=>{
     if(req.cookies.user_id){
         Student.findById(req.cookies.user_id).then(function (data) {
+            // 用populate作表关联
             StudentBook.find({user_id:req.cookies.user_id}).populate('book_id')
                 .then(function (sbData) {
                     console.log(sbData);
